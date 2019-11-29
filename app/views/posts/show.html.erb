@@ -1,0 +1,31 @@
+<h1> Post </h1>
+<p>
+  <b>Name:  </b>
+  <%= @post.name %>
+  </p>
+
+  <p>
+  <b>Content:  </b>
+  <%= @post.content %>
+  </p>
+
+  <p>
+    <b>Created_At</b>
+    <%= Time.now%>
+  </p>
+  <div>
+  <%= @post.comments %>
+</div>
+
+  <h2>Add a Comment</h2>
+  <%= form_for ([@post, @post.comments.build]) do  |f| %> 
+  <p>
+    <%= f.label :Body %>
+    <%= f.text_area :body %>
+  </p>
+
+  <p>
+    <%= f.submit "Submit" %>
+      </p>
+
+  <% end %>
