@@ -1,18 +1,23 @@
-<h1> Update Post </h1>
-
-<%= form_for @post do |form| %>
-<p>
-  <%= form.label :Name  %><br/ >
-  <%= form.text_field :name %>
-</p>
-
-<p>
-  <%= form.label :Content %><br/ >
-  <%= form.text_area :content %>
-</p>
-
-<p>
-  <%= form.submit 'Update'%>
-</p>
-
-<% end %>
+<div class="container">
+  <div class="card" style="height: 400px; widht: 50%; padding: 10px">
+    <div class="card-text">
+      <h1> Update Post </h1>
+      <%= form_for @post do |form| %>
+      <p>
+        <%= form.label :Name  %><br />
+        <%= form.text_field :name %>
+      </p>
+      <p>
+        <%= form.label :Content %><br />
+        <%= form.text_area :content %>
+      </p>
+      <p>
+        <%= form.submit 'Update'%>
+      </p>
+      <% end %>
+    </div>
+  </div>
+</div><br />
+<div class="container">
+  <%= link_to "Back", posts_path, class: "btn btn-primary" %>
+</div>
